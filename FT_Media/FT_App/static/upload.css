@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+}
+#bac{
+
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,65,149,1) 0%, rgba(238,130,250,1) 90% ); */
+    /* background-image: linear-gradient( 243deg,  rgba(255,253,221,1) 13.4%, rgba(248,215,215,1) 82.1% ); */
+    background-image: radial-gradient( circle 328px at 2.9% 15%,  rgba(191,224,251,1) 0%, rgba(232,233,251,1) 25.8%, rgba(252,239,250,1) 50.8%, rgba(234,251,251,1) 77.6%, rgba(240,251,244,1) 100.7% );
+    height: 720px;
+    background-attachment: fixed;
+    overflow: hidden;
+    /* object-fit: contain;
+    background-repeat: no-repeat; */
+}
+/* #upload-pic{ 
+
+    border: 1px solid black;
+
+} */
+
+#file-upload{
+    border: 1px solid #dae1f1;
+    border-radius: 5px;
+    background: #fff;
+    color: #545d7a;
+    /* font-family: "Sacramento", cursive;
+    font-weight: 700;
+    font-style: normal; */
+    font-family: "Inconsolata", monospace;
+}
+#txt{
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    border-radius: 10px;
+    /* font-family: "Sacramento", cursive;
+    font-weight: 700;
+    font-style: normal; */
+    font-family: "Inconsolata", monospace;
+}
+#upload-btn{
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    border-radius: 10px;
+    padding: 10px;
+    width: 25%;
+    /* font-family: "Sacramento", cursive;
+    font-weight: 700;
+    font-style: normal; */
+    font-family: "Inconsolata", monospace;
+    
+}
+#post-header{
+
+    /* font-family: "Ubuntu Mono", monospace;
+    font-weight: 700; */
+    font-family: "Sacramento", cursive;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+
+}
+#header{
+    border: 1px solid #dae1f1;
+    /* border: 1px solid pink; */
+    /* background-image: radial-gradient( circle 329px at 3.1% 9.3%,  rgba(251,204,235,1) 28.1%, rgba(221,221,221,0.15) 100.7% ); */
+    /* background-image: radial-gradient( circle 905px at 4.9% 85.8%,  rgba(255,243,242,1) 0.1%, rgba(255,247,220,1) 57.6% ); */
+    /* background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%); */
+    /* background-image: radial-gradient( circle farthest-corner at 6.7% 22.9%,  rgba(53,62,75,1) 0%, rgba(187,187,187,1) 96.6% ); */
+    /* background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ); */
+    /* background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% ); */
+    /* background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+    /* font-family: "Ubuntu Mono", monospace;
+    font-weight: 700; */
+    font-family: "Sacramento", cursive;
+    font-weight: 700;
+    font-style: normal;
+    /* font-style: italic; */
+   
+
+
+}
+#upload-card{
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,145,0,1) 0%, rgba(255,102,0,1) 90% ); */
+    /* background-image: linear-gradient( 109.6deg,  rgba(255,22,229,1) 11.2%, rgba(254,80,119,1) 91.1% ); */
+    /* background-image: linear-gradient( 72.5deg,  rgba(0,175,255,1) 27.9%, rgba(0,224,254,1) 84.2% ); */
+    /* background-image: radial-gradient( circle 905px at 4.9% 85.8%,  rgba(255,243,242,1) 0.1%, rgba(255,247,220,1) 57.6% ); */
+    /* background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+
+}

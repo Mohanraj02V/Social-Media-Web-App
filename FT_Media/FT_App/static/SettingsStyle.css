@@ -1,0 +1,113 @@
+#container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+#profile-img label{
+    display: block;
+    margin: 1rem 0;
+}
+#profile-bio label{
+    display: block;
+    margin: 1rem 0;
+
+}
+
+#profile-location label{
+    display: block;
+    margin: 1rem 0;
+
+}
+#header{
+    margin: 0 5rem;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    background-image: radial-gradient( circle 400px at 6.8% 8.3%,  rgba(255,244,169,1) 0%, rgba(255,244,234,1) 100.2% );
+    /* background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% ); */
+    border-radius: 10px;
+
+   
+
+}
+#border{
+    border: 1px solid black;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    background-image: radial-gradient( circle 400px at 6.8% 8.3%,  rgba(255,244,169,1) 0%, rgba(255,244,234,1) 100.2% );
+
+}
+#btn{
+    margin: 2rem 0;
+}
+#cancel-btn{
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    padding: 10px;
+}
+#cancel-btn a{
+    text-decoration: none;
+    color: black;
+}
+
+#save-btn{
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    padding: 10px;
+}
+input,textarea{
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    padding: 10px;
+    
+}
+#bac{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+    font-family: "Inconsolata", monospace;
+   object-fit: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   overflow: hidden;
+
+}
+#username{
+    font-family: "Playwrite CU", cursive;
+    padding-left: 15px;
+}
+#text{
+    font-family: "Raleway", sans-serif;
+    padding-left: 15px;
+}
+
+@media screen and (max-width:600px) {
+
+    #bac{
+        overflow: auto;
+    }
+
+    #container{
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #border{
+        padding:0 2rem;
+        margin: 0;
+    }
+#header{
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    width: 100vw;
+}
+}
+
+

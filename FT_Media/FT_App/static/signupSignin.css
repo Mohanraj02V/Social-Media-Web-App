@@ -1,0 +1,157 @@
+#bac{
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(245,0,87,1) 0%, rgba(185,1,81,1) 90% ); */
+    /* background-image: linear-gradient( 111.2deg,  rgba(232,5,5,1) 1.7%, rgba(245,49,191,1) 98.7% ); */
+    /* background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+    height: 720px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+#main-header{
+    /* background-image: radial-gradient( circle farthest-corner at 10.2% 55.8%,  rgba(252,37,103,1) 0%, rgba(250,38,151,1) 46.2%, rgba(186,8,181,1) 90.1% ); */
+    /* background-image: linear-gradient( 95.2deg,  rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% ); */
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
+    /* background-image: linear-gradient( 268deg,  rgba(255,105,180,1) 4.1%, rgba(255,174,215,1) 74.3% ); */
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
+     /* background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% ); */
+     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% ); */
+     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(2,37,78,1) 0%, rgba(4,56,126,1) 19.7%, rgba(85,245,221,1) 100.2% ); */
+     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% ); */
+     /* background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ); */
+     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% ); */
+     /* background-image: linear-gradient( 180.5deg,  rgba(46,255,171,1) 12.3%, rgba(252,251,222,0.46) 92% ); */
+     /* background-image: linear-gradient( 183.5deg,  rgba(244,173,6,1) 18.6%, rgba(229,251,31,1) 119.9% ); */
+     /* background-image: linear-gradient( 180deg,  rgba(155,254,23,1) 45.5%, rgba(36,243,8,1) 97.9% ); */
+
+    padding: 1.5rem 5rem;
+    border-radius: 10px;
+    /* border: 1px solid #dae1f1; */
+}
+
+#login-btn{
+
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    padding: 10px;
+    width: 20%;
+
+}
+#login-btn:hover{
+    background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );
+    color: black;
+}
+
+#container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+#card{
+
+    padding: 2rem 5rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+
+}
+
+#content p{
+
+    padding: 0.5rem 0;
+
+}
+
+#content p input{
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    padding: 8px;
+    width: 100%;
+}
+#content p input:focus{
+
+    /* border: 1px solid #dae1f1; */
+    outline: #dae1f1;
+
+}
+#signup-btn{
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background-image: linear-gradient( 135.9deg,  rgba(109,25,252,1) 16.4%, rgba(125,31,165,1) 56.1% );
+    color: black;
+    padding: 10px;
+}
+#signup-btn:hover{
+    background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+
+    #login-btn{
+
+        border-radius: 5px;
+        width: 30%;
+    
+    }
+    #card{
+
+        border-radius: 20px;
+    
+    }
+    #bac{
+    height: 1366px;
+
+
+    }
+
+    #main-header{
+        margin: 1rem 0;
+
+    }
+    
+
+
+    
+}
+
+@media screen and (max-width:600px) {
+
+    #card{
+        padding: 20px;
+    }
+    #content p input{
+        border-radius: 8px;
+        padding: 8px;
+    }
+    #content p{
+
+        padding: 0rem 0;
+    }
+    #bac{
+    
+        height: 740px;
+
+    }
+    #main-header{
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+    }
+    #login-btn{
+        
+        margin: 0 1rem;
+        width: 50%;
+        padding: 5px;
+    }
+    #signup-btn{
+        border-radius: 5px;
+        padding: 5px;
+    }
+}

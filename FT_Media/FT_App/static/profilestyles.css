@@ -1,0 +1,96 @@
+#bac{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+    font-family: "Playwrite HR Lijeva", cursive;
+
+}
+#profile-img{
+    border-radius: 50%;
+    width: 20%;
+    height: 15%;
+}
+#profil-box{
+    display: flex;
+    margin: 1rem 0;
+   
+}
+#name-bio{
+    margin: 1rem 2rem;
+}
+#count-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    /* word-spacing: 10px; */
+}
+#container-1{
+    width: 100vw;
+}
+#posts-img{
+    width: 100%;
+    height: 50%;
+}
+
+#container-2{
+    margin: 0;
+    padding: 0;
+    
+}
+#card{
+    width: 50%;
+    margin: 0 20rem;
+
+}
+#post-header{
+    margin: 2rem 20rem;
+}
+#follow-unfollow-btn{
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    border-radius: 10px;
+    padding: 5px;
+    
+   
+}
+@media screen and (max-width:800px) {
+
+
+    #count-list{
+        margin: 0.5rem 0; 
+    }
+    #card{
+        width: 100vw;
+        margin: 1rem 0;
+
+    }
+    #posts-img{
+        width: 100vw;
+        height: 50vh;
+    }
+    #post-header{
+        margin: 2rem 0rem;
+    }
+
+
+  
+}
+
+@media screen and (max-width:600px) {
+
+    #count-list{
+        margin: 0.5rem 0; 
+    }
+    #card{
+        width: 100vw;
+        margin: 1rem 0;
+
+    }
+    #posts-img{
+        width: 100vw;
+        height: 50vh;
+    }
+    #post-header{
+        margin: 2rem 0rem;
+    }
+
+}

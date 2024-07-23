@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'SettingsStyle.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Playwrite+CU:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body id="bac">
+
+    <header id="header">
+        <h3 id="home"><a style="text-decoration: none; color: #FF0000;" href="/">Home </a> <span id="text">Create Your Profile </span><span id="username">@{{user.username}}</span></h3>
+        <hr>
+    </header>
+
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <header><p>General</p></header>
+
+                    <div id="border">
+
+                    <div id="profile-img">
+
+                        <label class="my-2" for="">Profile Image</label>
+                        <p><img style="border-radius: 50%;" src="{{user_profile.profileimg.url}}" alt="" width="75" height="75"></p>
+                        <p><input type="file" name="image" value=""></p>
+
+                    </div>
+
+                    <div id="profile-bio" class="my-2">
+                        <label for="about">Bio</label>
+                        <textarea name="bio" id="about">{{user_profile.bio}}</textarea>
+                        <!-- <input id="about" name="bio" type="text"> -->
+                    </div>
+
+                    <div id="profile-location" class="my-2">
+                        <label for=""> Location</label>
+                        <input type="text" name="location" value="{{user_profile.location}}">
+                    </div>
+
+                    <div id="btn" class="my-2">
+                        <button id="cancel-btn"> <a href="/">Cancel</a> </button>
+                        <button id="save-btn" type="submit"> Save </button>
+                    </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

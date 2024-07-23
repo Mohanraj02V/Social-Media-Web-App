@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Indexstyle.css' %}" >
+    <script defer src="{% static 'app.js' %}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="bac">
+
+    <div id="container-1" class="container m-0 p-0">
+
+        <div class="row">
+
+            <div class="col">
+
+                <div id="header">
+
+                <div>
+                    <form action="/search" method="POST">
+                        {% csrf_token %}
+
+                    <p><input id="search-box"  type="text" name="username" placeholder="Search for username.. "> <button id="search-btn"  type="submit"><i class="fa fa-search fa-1x"></i></button></p>
+                    
+                   
+                    
+                      </form>
+                    
+
+                </div>
+
+                <div id="header-profile-img">
+
+                    <img onclick="toggleDropdown()" id="dropbtn" src="{{user_profile.profileimg.url}}" alt="" width="75" height="75"> 
+                    <a class="text-decoration-none text-dark" href="/profile/{{user_profile.user}}"><p class="py-3" style="margin-left: 0.3rem;">@{{user_profile.user}}</p></a>
+    
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/settings">Account setting</a>
+                        <a href="/logout">Log Out </a>
+                        <a href="/upload"> Upload Your Post</a>
+                        
+                    </div>
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+                                            <!-- POST -->
+            <div id="container-2" class="container m-0 p-0">
+
+                <div class="row">
+
+
+                <div class="col">
+
+                
+                    {% for post in posts reversed %}
+
+                    <div class="card" id="card">
+
+                    
+
+                    <!-- POST Header -->
+
+                    <div id="post-head">
+                        <P><a href="/profile/{{post.user}}"></a>@{{post.user}}</P>
+                        <p><i class="fa-regular fa-circle-dot"></i></p>
+                    </div>
+
+                    <!-- BODY -->
+
+                    <div>
+                        <a href="{{post.image.url}}">  
+                            <img  src="{{post.image.url}}" alt="" id="post-img">
+                        </a>
+                    </div>
+
+                    <!-- FOOTER -->
+
+                    <div>
+
+                    <div id="post-likes">
+                        <div id="post-likess">
+                        <p ><a href="/like-post?post_id={{post.id}}"><i class="far fa-heart"></i>
+
+                            {% if post.no_of_likes == 0%}
+                            <p>No Likes</p>
+                            {% elif post.no_of_likes == 1 %}
+                            <p>Liked by {{post.no_of_likes}} Person</p>
+                            {% else %}
+                            <p>Liked by {{post.no_of_likes}} People</p>
+                            {% endif %}</a></p>
+                        </div>
+                        <div id="post-download">
+                        
+                        <p ><a href="{{post.image.url}}" download><i class="fas fa-arrow-down"></i></a></p>
+
+                        </div>
+                    </div>
+                    <div id="post-username">
+                        <p ><a href="/profile/{{post.user}}">@{{post.user}}</a></p>
+                        <p id="caption">{{post.caption}}</p>
+                    </div>
+                        </div>
+
+                    
+
+                    
+
+                    </div>
+                    {% endfor %}
+                    <!-- <hr> -->
+
+                    
+
+                </div>
+
+                <div class="col">
+                    <div>
+
+                    <h5>Followers You Can Follow</h5>
+                    <div id="suggestion">
+                    {% for suggestion in suggestions_username_profile_list %}
+                    <div id="follow-suggestions">
+                        <a href="/profile/{{suggestion.user}}"><img id="follow-user-img" src="{{suggestion.profileimg.url}}" alt="" width="75" height="70"></a>
+                        <p>@{{suggestion.user}}<br> {{suggestion.bio}}</p>
+                        <p id="view-user-btn"><a href="/profile/{{suggestion.user}}">View User</a></p>
+                        
+                    </div>
+                    {% endfor %}
+                    </div>
+                    
+                    </div>
+
+
+                </div>
+            
+
+
+                 </div>
+
+
+            </div>
+
+
+    
+</body>
+</html>

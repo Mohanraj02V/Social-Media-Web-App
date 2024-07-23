@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'upload.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Sevillana&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Sacramento&family=Sevillana&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Kalnia+Glaze:wght@100..700&family=Sacramento&family=Sevillana&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body id="bac">
+
+    <header id="header" class=" py-5 d-flex justify-content-center"><h2>FT Media</h2></header>
+
+    <div class="container d-flex justify-content-center" id="container">
+
+        <div class="row">
+            <header  class="d-flex justify-content-center my-4 py-3">
+                <p id="post-header"> <span style="color: #DC143C;"> <b>Post</b> </span> ( You Can Upload Only Pics )</p>
+                
+            </header>
+            <div class="col">
+
+
+                <div id="upload-pic" class="d-flex justify-content-center">
+
+                    <form action="upload" method="POST" enctype="multipart/form-data">
+                    {% csrf_token%} 
+                  
+                    <div id="upload-card" class=" card my-4 py-5 px-5">
+
+                       <p class="py-3 mx-4"> <input id="file-upload" type="file" name="image_upload" > </p>
+                       
+                        <p  class="mx-4"> <textarea id="txt" name="caption" placeholder="caption..."></textarea> </p>
+
+                         <a href="/"><button id="upload-btn" class="mx-4 my-3"  type="submit">Upload</button></a>
+                    </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
